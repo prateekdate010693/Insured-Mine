@@ -19,5 +19,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.�
 
 https://github.com/prateekdate010693/Insured-Mine.git
 
+# For installing Node Module
+
+npm i
+
 
 
