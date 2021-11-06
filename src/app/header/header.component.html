@@ -1,0 +1,13 @@
+<div class="head-wrpper">
+    <div class="logo">
+        <img src="../../assets/img/InsuredMine.png">
+        <p *ngIf="loginUser">Login User Name <b>"{{loginUser}}"</b></p>
+    </div>
+    <div class="nav-list">
+        <a [routerLink]="['/']" >Home</a>
+        <a [routerLink]="['/about']">About</a>
+        <a *ngIf="loginUser" [routerLink]="['/gallery']">Gallery</a>
+        <a class="log-btn" (click)="login()" *ngIf="!showBoolean">Login</a>
+        <a class="log-btn" (click)="logout()"  *ngIf="logbtn">Logout</a>
+    </div>
+</div>

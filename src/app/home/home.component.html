@@ -1,0 +1,56 @@
+<div class="body">
+    <div class="header-img">
+       <img src="../../assets/img/Best-insurance-crm-for-agents-agencies-and-ams-integrations-1100-x-734.png"> 
+       <div class="content">
+          <h1>All-In-One Insurance CRM</h1>
+          <h1>Growth Is Not Optional</h1> 
+          <h4>The Best Insurance CRM Technology Solution to Grow Your Insurance Agency Through Sales, Engagement, Analytics, & Mobility.</h4>
+       </div>
+       <div class="overlay"></div>
+       <div class="Login" *ngIf="serviceShow">
+        <form [formGroup]="loginForm">
+         <div class="parent">
+           <div class="form-group">
+              <label for="exampleFormControlTextarea1">User Name</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #input (input)="suggestion($event.target.value)" name="text"></textarea>
+              <p class="errors" *ngIf="loginForm.controls['selval'].errors?.required && isSubmitted">Please Select User Id</p>
+           </div>
+           <div class="form-group child">
+                 <select class="form-control" id="exampleFormControlSelect1" *ngIf="inputSugesstion" formControlName="selval">
+                    <option *ngFor="let usersdb of usersDB" [value]="usersdb.userid">{{usersdb.userid}}</option>
+                    <!-- <option  value="2">2</option> -->
+                 </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Password"> 
+                <p class="errors" *ngIf="loginForm.controls['password'].errors?.required && isSubmitted">Please Enter User Password</p>
+              </div>
+              <button  (click)="submit()" type="button" class="btn btn-primary">Submit</button>
+           </div>
+          </form>
+       </div>
+    </div>
+    <div class="invention">
+        <div class="row" style="align-items: center;">
+           <div class="col-6">
+              <h2>InsuredMine CRM Features</h2>
+              <p>What will InsuredMine help Insurance Agencies achieve?</p>
+           </div>
+           <div class="col-6">
+              <img src="../../assets/img/feature-Image.png">
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-6" style="min-height: 300px;" *ngFor="let card of card">
+               <div class="card">
+                  <img class="card-img-top" style="width: 20%;" [src]="card.img" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">{{card.title}}</h5>
+                    <p class="card-text">{{card.content}}</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

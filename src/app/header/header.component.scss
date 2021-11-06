@@ -1,0 +1,35 @@
+.head-wrpper{
+    display: flex;
+    justify-content: space-between;
+    background-color: cadetblue;
+    padding: 10px;
+    .logo{
+        p{
+            margin: 0;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            b{
+                text-transform: capitalize;
+            }
+        }
+    }
+    .nav-list{
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        align-items: center;
+        a{
+            color: #fff;
+            border: none;
+            text-decoration: none;
+            font-size: 20px;
+            cursor: pointer;
+           &.log-btn{
+                background-color: navy;
+                padding:5px 20px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
